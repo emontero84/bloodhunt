@@ -16,19 +16,21 @@ namespace bloodhunt
 		public BloodhuntContext (MonoBehaviour view, ContextStartupFlags flags) : base(view, flags)
 		{
 		}
-		
+
 		protected override void mapBindings()
 		{
 			// Model binding.
-			//injectionBinder.Bind<IExampleModel>().To<ExampleModel>().ToSingleton();
-			//injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
+			injectionBinder.Bind<IBloodhuntModel>().To<BloodhuntModel>().ToSingleton();
 
 			// View to Mediator binding.
 			mediationBinder.Bind<ExampleView>().To<ExampleMediator>();
-			
+
 			// Event to Command binding.
 			//commandBinder.Bind(BloodhuntEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();
 			commandBinder.Bind(ContextEvent.START).To<StartCommand>().Once ();
+
+			// Service binding.
+			//injectionBinder.Bind<IExampleService>().To<ExampleService>().ToSingleton();
 
 		}
 	}

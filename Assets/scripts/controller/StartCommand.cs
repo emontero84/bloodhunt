@@ -10,18 +10,22 @@
 
 using System;
 using UnityEngine;
-using strange.extensions.context.api;
 using strange.extensions.command.impl;
+using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 
 namespace bloodhunt
 {
 	public class StartCommand : EventCommand
 	{
-		
+
 		[Inject(ContextKeys.CONTEXT_VIEW)]
-		public GameObject contextView{get;set;}
-		
+		public GameObject contextView
+		{
+			get;
+			set;
+		}
+
 		public override void Execute()
 		{
 			GameObject go = new GameObject();

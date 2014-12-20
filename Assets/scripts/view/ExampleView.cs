@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections;
 using UnityEngine;
@@ -10,18 +9,22 @@ namespace bloodhunt
 	public class ExampleView : View
 	{
 		internal const string CLICK_EVENT = "CLICK_EVENT";
-		
+
 		[Inject]
-		public IEventDispatcher dispatcher{get;set;}
-		
+		public IEventDispatcher dispatcher
+		{
+			get;
+			set;
+		}
+
 		private float theta = 20f;
 		private Vector3 basePosition;
-		
+
 		//Publicly settable from Unity3D
 		public float edx_WobbleSize = 1f;
 		public float edx_WobbleDampen = .9f;
 		public float edx_WobbleMin = .001f;
-		
+
 		internal void init()
 		{
 			/*GameObject go = Instantiate(Resources.Load("Textfield")) as GameObject;
@@ -47,9 +50,9 @@ namespace bloodhunt
 			go.AddComponent<ClickDetector>();
 			ClickDetector clicker = go.GetComponent<ClickDetector>() as ClickDetector;
 			clicker.dispatcher.AddListener(ClickDetector.CLICK, onClick); */
-      Debug.Log("vista creada") ;
+			Debug.Log("vista creada") ;
 		}
-		
+
 		internal void updateScore(string score)
 		{
 			GameObject go = Instantiate(Resources.Load("Textfield")) as GameObject;
@@ -59,33 +62,33 @@ namespace bloodhunt
 
 			textMesh.text = score.ToString();
 		}
-		
+
 		void Update()
 		{
 			transform.Rotate(Vector3.up * Time.deltaTime * theta, Space.Self);
 		}
-		
+
 		void onClick()
 		{
 			dispatcher.Dispatch(CLICK_EVENT);
 			startWobble();
 		}
-		
+
 		private void startWobble()
 		{
 			StartCoroutine(wobble (edx_WobbleSize));
 			basePosition = Vector3.zero;
 		}
-		
+
 		private IEnumerator wobble(float size)
 		{
-			while(size > edx_WobbleMin)
+			while (size > edx_WobbleMin)
 			{
 				size *= edx_WobbleDampen;
 				Vector3 newPosition = basePosition;
-				newPosition.x += UnityEngine.Random.Range(-size, size);
-				newPosition.y += UnityEngine.Random.Range(-size, size);
-				newPosition.z += UnityEngine.Random.Range(-size, size);
+				newPosition.x += UnityEngine.Random.Range(- size, size);
+				newPosition.y += UnityEngine.Random.Range(- size, size);
+				newPosition.z += UnityEngine.Random.Range(- size, size);
 				gameObject.transform.localPosition = newPosition;
 				yield return null;
 			}
