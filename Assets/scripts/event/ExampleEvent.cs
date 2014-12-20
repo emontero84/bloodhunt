@@ -1,8 +1,8 @@
 using System;
 
-namespace strange.examples.myfirstproject
+namespace bloodhunt
 {
-	public class ExampleEvent
+	public class BloodhuntEvent
 	{
 		public const string SCORE_CHANGE = "SCORE_CHANGE";
 		public const string REQUEST_WEB_SERVICE = "REQUEST_WEB_SERVICE";

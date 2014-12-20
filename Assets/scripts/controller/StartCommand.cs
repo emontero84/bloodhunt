@@ -14,7 +14,7 @@ using strange.extensions.context.api;
 using strange.extensions.command.impl;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 
-namespace strange.examples.myfirstproject
+namespace bloodhunt
 {
 	public class StartCommand : EventCommand
 	{

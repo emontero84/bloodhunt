@@ -1,21 +1,18 @@
-/// An example view
-/// ==========================
-/// 
 
 using System;
 using System.Collections;
 using UnityEngine;
 using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.mediation.impl;
-using strange.extensions.signal.impl;
 
-namespace strange.examples.signals
+namespace bloodhunt
 {
 	public class ExampleView : View
 	{
-		public Signal clickSignal = new Signal();
+		internal const string CLICK_EVENT = "CLICK_EVENT";
 		
-		GameObject latestGO;
+		[Inject]
+		public IEventDispatcher dispatcher{get;set;}
 		
 		private float theta = 20f;
 		private Vector3 basePosition;
@@ -27,9 +24,7 @@ namespace strange.examples.signals
 		
 		internal void init()
 		{
-			latestGO = Instantiate(Resources.Load("Textfield")) as GameObject;
-			GameObject go = latestGO;
-			go.name = "first";
+			/*GameObject go = Instantiate(Resources.Load("Textfield")) as GameObject;
 			
 			TextMesh textMesh = go.GetComponent<TextMesh>();
 			textMesh.text = "http://www.thirdmotion.com";
@@ -51,28 +46,18 @@ namespace strange.examples.signals
 			
 			go.AddComponent<ClickDetector>();
 			ClickDetector clicker = go.GetComponent<ClickDetector>() as ClickDetector;
-			clicker.clickSignal.AddListener(onClick);
+			clicker.dispatcher.AddListener(ClickDetector.CLICK, onClick); */
+      Debug.Log("vista creada") ;
 		}
 		
 		internal void updateScore(string score)
 		{
-			latestGO = Instantiate(Resources.Load("Textfield")) as GameObject;
-			GameObject go = latestGO;
+			GameObject go = Instantiate(Resources.Load("Textfield")) as GameObject;
 			TextMesh textMesh = go.GetComponent<TextMesh>();
 			textMesh.font.material.color = Color.white;
 			go.transform.parent = transform;
 
 			textMesh.text = score.ToString();
-		}
-		
-		internal string currentText
-		{
-			get
-			{
-				GameObject go = latestGO;
-				TextMesh textMesh = go.GetComponent<TextMesh>();
-				return textMesh.text;
-			}
 		}
 		
 		void Update()
@@ -82,7 +67,7 @@ namespace strange.examples.signals
 		
 		void onClick()
 		{
-			clickSignal.Dispatch();
+			dispatcher.Dispatch(CLICK_EVENT);
 			startWobble();
 		}
 		
