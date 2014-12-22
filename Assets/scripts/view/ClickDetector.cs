@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using strange.extensions.mediation.impl;
 
-namespace bloodhunt
+namespace bloodhunt.view
 {
 	public class ClickDetector : EventView
 	{

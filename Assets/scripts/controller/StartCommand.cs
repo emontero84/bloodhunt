@@ -10,11 +10,12 @@
 
 using System;
 using UnityEngine;
+using bloodhunt.view;
 using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 
-namespace bloodhunt
+namespace bloodhunt.controller
 {
 	public class StartCommand : EventCommand
 	{

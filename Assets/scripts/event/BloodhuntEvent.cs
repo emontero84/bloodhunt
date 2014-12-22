@@ -1,6 +1,6 @@
 using System;
 
-namespace bloodhunt
+namespace bloodhunt.events
 {
 	public class BloodhuntEvent
 	{

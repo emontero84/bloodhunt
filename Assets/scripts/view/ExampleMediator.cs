@@ -2,8 +2,9 @@ using System;
 using UnityEngine;
 using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.mediation.impl;
+using bloodhunt.events;
 
-namespace bloodhunt
+namespace bloodhunt.view
 {
 	public class ExampleMediator : EventMediator
 	{
@@ -18,7 +19,7 @@ namespace bloodhunt
 		{
 
 			//Listen to the view for an event
-			view.dispatcher.AddListener(ExampleView.CLICK_EVENT, onViewClicked);
+			//view.dispatcher.AddListener(ExampleView.CLICK_EVENT, onViewClicked);
 
 			//Listen to the global event bus for events
 			dispatcher.AddListener(BloodhuntEvent.SCORE_CHANGE, onScoreChange);
@@ -29,7 +30,7 @@ namespace bloodhunt
 		public override void OnRemove()
 		{
 			//Clean up listeners when the view is about to be destroyed
-			view.dispatcher.RemoveListener(ExampleView.CLICK_EVENT, onViewClicked);
+			//view.dispatcher.RemoveListener(ExampleView.CLICK_EVENT, onViewClicked);
 			dispatcher.RemoveListener(BloodhuntEvent.SCORE_CHANGE, onScoreChange);
 			Debug.Log("Mediator OnRemove");
 		}
@@ -44,7 +45,7 @@ namespace bloodhunt
 		{
 			//float score = (float)evt.data;
 			string score = (string)evt.data;
-			view.updateScore(score);
+
 		}
 	}
 }

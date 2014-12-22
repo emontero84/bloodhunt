@@ -1,6 +1,6 @@
 using System;
 
-namespace bloodhunt
+namespace bloodhunt.model
 {
 	public interface IBloodhuntModel
 	{

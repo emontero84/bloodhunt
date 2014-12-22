@@ -1,5 +1,8 @@
 using System;
 using UnityEngine;
+using bloodhunt.controller;
+using bloodhunt.model;
+using bloodhunt.view;
 using strange.extensions.context.api;
 using strange.extensions.context.impl;
 using strange.extensions.dispatcher.eventdispatcher.api;
