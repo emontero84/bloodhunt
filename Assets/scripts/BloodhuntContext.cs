@@ -26,7 +26,7 @@ namespace bloodhunt
 			injectionBinder.Bind<IBloodhuntModel>().To<BloodhuntModel>().ToSingleton();
 
 			// View to Mediator binding.
-			mediationBinder.Bind<ExampleView>().To<ExampleMediator>();
+			mediationBinder.Bind<CharacterSelectionScreenView>().To<CharacterSelectionScreenViewMediator>();
 
 			// Event to Command binding.
 			//commandBinder.Bind(BloodhuntEvent.REQUEST_WEB_SERVICE).To<CallWebServiceCommand>();

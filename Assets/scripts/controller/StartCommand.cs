@@ -31,7 +31,7 @@ namespace bloodhunt.controller
 		{
 			GameObject go = new GameObject();
 			go.name = "ExampleView";
-			go.AddComponent<ExampleView>();
+			go.AddComponent<CharacterSelectionScreenView>();
 			go.transform.parent = contextView.transform;
 		}
 	}
