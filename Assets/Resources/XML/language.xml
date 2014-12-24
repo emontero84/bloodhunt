@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<lang id="es">
+		<phrase id="BLOODHUNT">Bloodhunt</phrase>
+		<phrase id="BRUJAH">Brujah</phrase>
+		<phrase id="GANGREL">Gangrel</phrase>
+		<phrase id="MALKAVIAN">Malkavian</phrase>
+		<phrase id="NOSFERATU">Nosferatu</phrase>
+		<phrase id="TOREADOR">Toreador</phrase>
+		<phrase id="TREMERE">Tremere</phrase>
+		<phrase id="VENTRUE">Ventrue</phrase>
+		<phrase id="DESCRIPTION_BRUJAH">Los Brujah son apasionados idealistas y rebeldes, más propensos a luchar por sus derechos que a escribir canciones de protesta.</phrase>
+		<phrase id="DESCRIPTION_GANGREL">Los Gangrel son salvajes solitarios muy en sintonía con la Bestia Interior, lo que les permite transformarse en criaturas bestiales.</phrase>
+		<phrase id="DESCRIPTION_MALKAVIAN">Los Malkavian son conocidos como Lunáticos por su habilidad para hacer a otros partícipes de su locura a través de su Disciplina, Dementación.</phrase>
+		<phrase id="DESCRIPTION_NOSFERATU">Horribles, silenciosos y poderosos. El Abrazo retuerce y deforma su apariencia física, forzándoles a buscar cobijo en lugares subterrános.</phrase>
+		<phrase id="DESCRIPTION_TOREADOR">Los Toreador son criaturas hermosas, esbeltas y seductoras. De todos los clanes, son los que más viva mantienen su conexión con el mundo mortal.</phrase>
+		<phrase id="DESCRIPTION_TREMERE">Los Tremere son magos de la sangre nacidos de rituales místicos y diablerie. No en vano, son el clan de la Camarilla en el que menos se puede confiar.</phrase>
+		<phrase id="DESCRIPTION_VENTRUE">Los Ventrue representan los verdaderos escalones superiores de la sociedad, por lo que son vistos como honorables y virtuosos líderes de la Camarilla.</phrase>
+		<phrase id="NAME">Nombre:</phrase>
+		<phrase id="DEFAULT_NAME">Mi Vampiro</phrase>
+		<!-- Main Menu -->
+		<phrase id="NEW_GAME">Juego Nuevo</phrase>
+		<phrase id="LOAD_GAME">Continuar</phrase>
+		<phrase id="SAVE_GAME">Guardar</phrase>
+		<phrase id="EXTRAS">Extras</phrase>
+		<phrase id="OPTIONS">Opciones</phrase>
+	</lang>
+	<lang id="en">
+		<phrase id="BLOODHUNT">Bloodhunt</phrase>
+		<phrase id="BRUJAH">Brujah</phrase>
+		<phrase id="GANGREL">Gangrel</phrase>
+		<phrase id="MALKAVIAN">Malkavian</phrase>
+		<phrase id="NOSFERATU">Nosferatu</phrase>
+		<phrase id="TOREADOR">Toreador</phrase>
+		<phrase id="TREMERE">Tremere</phrase>
+		<phrase id="VENTRUE">Ventrue</phrase>
+		<phrase id="DESCRIPTION_BRUJAH">Brujah are passionate idealists and rebels, more likely to fight for their rights than write protest songs.</phrase>
+		<phrase id="DESCRIPTION_GANGREL">Gangrel are wild loners that are the most in tune with the Beast Within,allowing them to shapeshift into more beastly forms.</phrase>
+		<phrase id="DESCRIPTION_MALKAVIAN">Malkavians are known as Lunatics because of their ability to hear voices of "insight" and subject others to their insanity through Dementation.</phrase>
+		<phrase id="DESCRIPTION_NOSFERATU">Hideous, skulking and powerful. The Embrace twists and deforms their physical features, forcing them to seek sanctuary underground.</phrase>
+		<phrase id="DESCRIPTION_TOREADOR">Toreador are beautiful creatures, svelt and seductive. Of all clans, they are the most connected to the mortal world through art and entertainment.</phrase>
+		<phrase id="DESCRIPTION_TREMERE">Blood sorcerers born from mystic rituals and diablerie, the Tremere are the least trusted of the Camarilla clans.</phrase>
+		<phrase id="DESCRIPTION_VENTRUE">Truly the upper echelons of society, the Ventrue are seen as the honorable and virtuous leaders of the Camarilla.</phrase>
+		<phrase id="NAME">Name:</phrase>
+		<phrase id="DEFAULT_NAME">My Vampire</phrase>
+		<!-- Main Menu -->
+		<phrase id="NEW_GAME">New Game</phrase>
+		<phrase id="LOAD_GAME">Load</phrase>
+		<phrase id="SAVE_GAME">Save</phrase>
+		<phrase id="EXTRAS">Extras</phrase>
+		<phrase id="OPTIONS">Options</phrase>
+	</lang>
+</languages>

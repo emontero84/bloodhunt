@@ -1,17 +1,25 @@
 using System;
 using UnityEngine;
-using bloodhunt.events;
+using bloodhunt.service;
 using bloodhunt.view;
 using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 
 namespace bloodhunt.controller {
-	public class StartCommand : EventCommand
+	public class LoadLanguageCommand : EventCommand
 	{
+		[Inject]
+		public ILoadLanguageService loadLanguageService
+		{
+			get;
+			set;
+		}
+
 		public override void Execute()
 		{
-			dispatcher.Dispatch(LoadLanguageEvent.LOAD_LANGUAGE);
+			Debug.Log("Loading language XML...");
+			loadLanguageService.LoadLanguageXML("XML/language");
 		}
 	}
 }
