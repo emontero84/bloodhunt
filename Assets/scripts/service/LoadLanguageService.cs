@@ -10,7 +10,7 @@ using strange.extensions.dispatcher.eventdispatcher.api;
 namespace bloodhunt.service {
 	public class LoadLanguageService : ILoadLanguageService
 	{
-		[Inject]
+		[Inject(ContextKeys.CONTEXT_DISPATCHER)]
 		public IEventDispatcher dispatcher {
 			get;
 			set;
@@ -21,28 +21,30 @@ namespace bloodhunt.service {
 		public LoadLanguageService () {
 		}
 
+		public XmlDocument xml {
+			get {
+				return _xml;
+			}
+		}
 		public void LoadLanguageXML(string url)
 		{
 			_xml = new XmlDocument();
 			TextAsset textAsset = (TextAsset)Resources.Load(url);
 			_xml.LoadXml(textAsset.text);
 
-			Debug.Log("Language XML loaded.");
-
 			dispatcher.Dispatch(LoadLanguageEvent.LANGUAGE_XML_LOADED);
+			Debug.Log("Language XML loaded.");
 		}
 
 		public Dictionary<string, string> GetLanguageDictionary(string languageID)
 		{
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
-			foreach (XmlNode node in _xml.SelectNodes("//lang[@id]"))
-			{
-				if (node.Attributes["id"].Value == languageID){
-					foreach (XmlNode phrase in node.ChildNodes)
-					{
-						Debug.Log("Phrase " + phrase["id"].Value + " = " + phrase.Value);
-						//dictionary.Add(phrase["id"].Value, phrase.Value);
+			foreach (XmlNode node in _xml.GetElementsByTagName("lang")) {
+				if (node.Attributes["id"].InnerText == languageID) {
+					foreach (XmlNode phrase in node.SelectNodes("phrase")) {
+						dictionary.Add(phrase.Attributes["id"].InnerText, phrase.InnerText);
 					}
+					break;
 				}
 			}
 			return dictionary;
