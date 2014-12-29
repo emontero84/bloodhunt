@@ -32,8 +32,10 @@ namespace bloodhunt.service {
 			TextAsset textAsset = (TextAsset)Resources.Load(url);
 			_xml.LoadXml(textAsset.text);
 
-			dispatcher.Dispatch(LoadLanguageEvent.LANGUAGE_XML_LOADED);
 			Debug.Log("Language XML loaded.");
+
+			dispatcher.Dispatch(LoadLanguageEvent.LANGUAGE_XML_LOADED);
+
 		}
 
 		public Dictionary<string, string> GetLanguageDictionary(string languageID)

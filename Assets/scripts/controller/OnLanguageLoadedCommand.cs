@@ -8,15 +8,13 @@ namespace bloodhunt.controller {
 	public class OnLanguageLoadedCommand : EventCommand
 	{
 		[Inject]
-		public ILoadLanguageService loadLanguageService
-		{
+		public ILoadLanguageService loadLanguageService {
 			get;
 			set;
 		}
 
 		[Inject]
-		public ILanguageModel languageModel
-		{
+		public ILanguageModel languageModel {
 			get;
 			set;
 		}
@@ -28,8 +26,9 @@ namespace bloodhunt.controller {
 			languageModel.Language = languageModel.LANGUAGE_ES;
 			languageModel.SetDictionary(loadLanguageService.GetLanguageDictionary(languageModel.Language));
 
-			dispatcher.Dispatch(LoadLanguageEvent.LANGUAGE_LOADED);
 			Debug.Log("Language model initialized.");
+
+			dispatcher.Dispatch(LoadLanguageEvent.LANGUAGE_LOADED);
 		}
 	}
 }
