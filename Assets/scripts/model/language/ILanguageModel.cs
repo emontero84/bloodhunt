@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace bloodhunt.model.language {
+namespace bloodhunt {
 	public interface ILanguageModel
 	{
 		string LANGUAGE_EN {

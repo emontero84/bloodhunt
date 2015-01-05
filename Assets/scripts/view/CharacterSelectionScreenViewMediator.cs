@@ -1,11 +1,9 @@
 using System;
 using UnityEngine;
-using bloodhunt.events;
-using bloodhunt.model.language;
 using strange.extensions.dispatcher.eventdispatcher.api;
 using strange.extensions.mediation.impl;
 
-namespace bloodhunt.view
+namespace bloodhunt
 {
 	public class CharacterSelectionScreenViewMediator : EventMediator
 	{

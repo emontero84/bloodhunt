@@ -6,7 +6,7 @@ using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.api;
 using System.Xml;
 
-namespace bloodhunt.service {
+namespace bloodhunt {
 	public interface ILoadLanguageService
 	{
 		XmlDocument xml {

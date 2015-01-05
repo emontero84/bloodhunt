@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using bloodhunt.model.language;
 
-namespace bloodhunt.model.language {
+namespace bloodhunt {
 	public class LanguageModel : ILanguageModel
 	{
 		private const string _LANGUAGE_EN = "en";

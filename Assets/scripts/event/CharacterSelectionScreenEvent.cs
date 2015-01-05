@@ -1,6 +1,6 @@
 using System;
 
-namespace bloodhunt.events
+namespace bloodhunt
 {
 	public class CharacterSelectionScreenEvent
 	{

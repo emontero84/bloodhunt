@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogs>
+	<npc id="character_name">
+		<choice id="language_id">
+            <phrase id="langugae_id" npc="npc_id" />
+            <phrase id="langugae_id" npc="npc_id" />
+            <phrase id="langugae_id" npc="npc_id" />
+		</choice>
+		<choice id="language_id">
+            <phrase id="langugae_id" npc="npc_id" />
+            <phrase id="langugae_id" npc="npc_id" />
+            <phrase id="langugae_id" npc="npc_id" />
+            <action id="quest" quest="quest_id" />
+		</choice>
+		<choice id="language_id">
+            <phrase id="langugae_id" npc="npc_id" />
+            <action id="exit_dialog" />
+		</choice>
+	</npc>
+</dialogs>

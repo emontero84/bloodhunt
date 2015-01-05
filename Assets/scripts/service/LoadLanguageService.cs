@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
-using bloodhunt.events;
 using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.api;
 
-namespace bloodhunt.service {
+namespace bloodhunt {
 	public class LoadLanguageService : ILoadLanguageService
 	{
 		[Inject(ContextKeys.CONTEXT_DISPATCHER)]

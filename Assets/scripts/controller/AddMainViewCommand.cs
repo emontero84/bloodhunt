@@ -1,11 +1,10 @@
 using System;
 using UnityEngine;
-using bloodhunt.view;
 using strange.extensions.command.impl;
 using strange.extensions.context.api;
 using strange.extensions.dispatcher.eventdispatcher.impl;
 
-namespace bloodhunt.controller {
+namespace bloodhunt {
 	public class AddMainViewCommand : EventCommand
 	{
 

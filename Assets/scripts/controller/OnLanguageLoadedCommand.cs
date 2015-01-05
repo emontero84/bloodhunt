@@ -1,10 +1,7 @@
 using UnityEngine;
-using bloodhunt.events;
-using bloodhunt.model.language;
-using bloodhunt.service;
 using strange.extensions.command.impl;
 
-namespace bloodhunt.controller {
+namespace bloodhunt {
 	public class OnLanguageLoadedCommand : EventCommand
 	{
 		[Inject]
