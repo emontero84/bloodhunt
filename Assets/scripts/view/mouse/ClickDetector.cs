@@ -6,7 +6,7 @@ namespace bloodhunt
 {
 	public class ClickDetector : EventView
 	{
-		public const string CLICK = "CLICK";
+		public const string CLICK = "ClickDetector.CLICK";
 
 		void OnMouseDown()
 		{

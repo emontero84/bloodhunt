@@ -28,6 +28,8 @@ namespace bloodhunt {
 			commandBinder.Bind(LoadLanguageEvent.LANGUAGE_XML_LOADED).To<OnLanguageLoadedCommand>().Once ();
 			commandBinder.Bind(LoadLanguageEvent.LANGUAGE_LOADED).To<AddMainViewCommand>().Once ();
 
+			commandBinder.Bind(BloodhuntEvent.LOAD_SCENE).To<LoadNewSceneCommand>();
+
 			// Service binding.
 			injectionBinder.Bind<ILoadLanguageService>().To<LoadLanguageService>().ToSingleton();
 

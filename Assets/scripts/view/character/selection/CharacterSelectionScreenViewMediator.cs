@@ -61,6 +61,8 @@ namespace bloodhunt
 		{
 			//Clean up listeners when the view is about to be destroyed
 			//view.dispatcher.RemoveListener(ExampleView.CLICK_EVENT, onViewClicked);
+
+			view.destroy();
 		}
 
 		private void onViewClicked()
